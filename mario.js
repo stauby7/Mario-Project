@@ -5,12 +5,21 @@ function createPyramid (height) {
     var row = '';
     
     for (var j = 1; j <= (height - i); j++) {
-      row += ' ';
+      row += ".";
     }
     for (var k = 1; k <= i; k++) {
       row += '#';
     }
-     console.log(row);
+
+     var para = document.createElement("p");
+
+     var node = document.createTextNode(row);
+
+     para.appendChild(node);
+
+     var element = document.getElementById("pyramid");
+
+     element.appendChild(para);
   }
 }
 createPyramid(height);
