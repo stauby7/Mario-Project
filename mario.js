@@ -1,19 +1,25 @@
-let height = window.prompt("How tall is your pyramid?")
 function createPyramid (height) {
+
+    let rows = document.getElementById("height").value;
+
+    let str = '';
+
   
-  for (var i = 1; i <= height; i++) {
-    var row = '';
+  for (var i = 1; i <= rows; i++) {
+     str = "";
     
-    for (var j = 1; j <= (height - i); j++) {
-      row += ".";
+    for (var j = 1; j <= (rows - i); j++) {
+      str += ".";
     }
     for (var k = 1; k <= i; k++) {
-      row += '#';
+      str += '#';
     }
+    
+    console.log(str);
 
      var para = document.createElement("p");
 
-     var node = document.createTextNode(row);
+     var node = document.createTextNode(str);
 
      para.appendChild(node);
 
@@ -22,4 +28,7 @@ function createPyramid (height) {
      element.appendChild(para);
   }
 }
+
+    let element = document.getElementById("Pyradheight");
+    element.addEventListener("click", createPyramid);
 createPyramid(height);
