@@ -23,28 +23,38 @@
 
     <p><strong>Draw a pyramid</strong></p>
 
-    <p>I say:</p>
-
     <br>
 
-    <label>How high?</label>
+    <!-- Brickchoice box and styles -->
 
-    <input type="text" id="height"/>
+    <label for="brickstyle">Choose a Brick Style:</label>
+    <select name="brickstyle" id="brickstyle" onchange="createPyramid()">
+      <option value="#">#</option>
+      <option value="@">@</option>
+      <option value="X">X</option>
+      <option value="$">$</option>
+      <option value="%">%</option>
+    </select>
 
     <br><br>
 
-    <button id="Pyradheight">Draw a pyramid</button>
+    <label for="Pyradheight">Height (between 0 and 20):</label>
+
+
+    <!-- slider choice (issues need fix) -->
+
+    <input type="range" oninput="createPyramid" id="height" name="pyramid" min="0" max="20">
+
+    <br><br>
+
+   
 
     <br><br>
 
     <div id="pyramid"></div>
 
-
     <script src="mario.js">
 
-
-    function drawPyrad(){
-      document.getElementById("pyramid");
     }
     
     </script>

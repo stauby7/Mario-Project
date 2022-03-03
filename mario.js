@@ -1,5 +1,12 @@
+   // let element = document.getElementById("Pyradheight");
+   // element.addEventListener("input", createPyramid);
+
+  // need to get the log to clear in after each input
+
 function createPyramid (height) {
 
+  console.log();
+  
     let rows = document.getElementById("height").value;
 
     let str = '';
@@ -12,7 +19,7 @@ function createPyramid (height) {
       str += ".";
     }
     for (var k = 1; k <= i; k++) {
-      str += '#';
+      str += document.getElementById("brickstyle").value;
     }
     
     console.log(str);
@@ -29,6 +36,4 @@ function createPyramid (height) {
   }
 }
 
-    let element = document.getElementById("Pyradheight");
-    element.addEventListener("click", createPyramid);
 createPyramid(height);
