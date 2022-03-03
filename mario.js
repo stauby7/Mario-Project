@@ -1,11 +1,12 @@
    // let element = document.getElementById("Pyradheight");
    // element.addEventListener("input", createPyramid);
 
-  // need to get the log to clear in after each input
+  
 
 function createPyramid (height) {
 
-  console.log();
+  // i fixed the clearing the page issue
+  document.getElementById("pyramid").innerHTML = "";
   
     let rows = document.getElementById("height").value;
 
